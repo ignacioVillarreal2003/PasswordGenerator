@@ -1,0 +1,43 @@
+<div class="background">
+  <div class="content">
+    <h2>Password Generator</h2>
+
+    <div class="contenedor">
+      <div class="selecciones">
+        <input id="numero" type="checkbox" [(ngModel)]="numero">
+        <label for="numero">numeros</label>
+      </div>
+  
+      <div class="selecciones">
+        <input id="letra" type="checkbox" [(ngModel)]="letra">
+        <label for="letra">letras</label>
+      </div>
+  
+      <div class="selecciones">
+        <input id="simbolo" type="checkbox" [(ngModel)]="simbolo">
+        <label for="simbolo">simbolos</label>
+      </div>  
+    </div>
+   
+    <div class="largo">
+      <h3>largo</h3>
+      <div class="cambiar">
+        <button class="btn-sum" (click)="sumarLargo(-1)">-1</button>
+        <p>{{ largo }}</p>
+        <button class="btn-sum" (click)="sumarLargo(1)">+1</button>
+      </div>
+    </div>
+
+    <button class="ui-btn" (click)="generarPassword()"><span>Generar </span></button>
+
+    <div class="passw">
+      <div class="password">
+        <p>{{ password }}</p>
+      </div>
+      <button class="button-copy" (click)="copyText()">
+        <span>Copy</span>
+      </button>
+    </div>
+    
+  </div>
+</div>
